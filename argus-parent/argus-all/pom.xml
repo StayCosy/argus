@@ -62,12 +62,10 @@
     </dependencies>
 
     <build>
+        <defaultGoal>compile</defaultGoal>
         <resources>
             <resource>
                 <directory>${user.dir}</directory>
-                <includes>
-                    <include>LICENSE</include>
-                </includes>
             </resource>
         </resources>
         <plugins>
@@ -110,7 +108,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+              <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.4.3</version>
@@ -127,24 +125,15 @@
                             <createDependencyReducedPom>true</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
-                                    <!--<include>com.alipay.sofa:sofa-rpc-common</include>-->
-                                    <!-- TODO -->
+                                    <include>org.argus:argus-api</include>
+                                    <include>org.argus:argus-cache</include>
+                                    <include>org.argus:argus-db</include>
+                                    <include>org.argus:argus-core</include>
+                                    <include>org.argus:argus-doc-swagger</include>
+                                    <include>org.argus:argus-example</include>
+                                    <include>org.argus:argus-test</include>
                                 </includes>
                             </artifactSet>
-                            <transformers>
-                                <!-- META-INF/services -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                                <!-- spring相关 -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                    <resource>META-INF/spring.handlers</resource>
-                                </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                    <resource>META-INF/spring.schemas</resource>
-                                </transformer>
-                            </transformers>
                         </configuration>
                     </execution>
                 </executions>
@@ -167,12 +156,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-            </build>
-        </profile>
-    </profiles>
 </project>
