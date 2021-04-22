@@ -13,4 +13,10 @@
     <artifactId>argus-example</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.argus</groupId>
+            <artifactId>argus-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>

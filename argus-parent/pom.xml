@@ -9,12 +9,11 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>[COSY] Argus Framework</name>
-    <url></url>
     <description>[COSY] Argus Framework of Java.</description>
 
 
     <modules>
-        <!-- ALl-in-one -->
+        <!-- all-in-one -->
         <module>argus-all</module>
         <!-- swagger -->
         <module>argus-doc-swagger</module>
@@ -24,7 +23,7 @@
         <module>argus-db</module>
         <module>argus-cache</module>
         <module>argus-core</module>
-        <!-- Other Code -->
+        <!-- others -->
         <module>argus-example</module>
         <module>argus-test</module>
     </modules>
