@@ -6,18 +6,13 @@
 
     <parent>
         <groupId>org.argus</groupId>
-        <artifactId>argus-parent</artifactId>
+        <artifactId>argus-idempotent</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>argus-example</artifactId>
+    <artifactId>argus-db</artifactId>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.argus</groupId>
-            <artifactId>argus-api</artifactId>
-            <version>${revision}</version>
-        </dependency>
-    </dependencies>
+
+
 </project>

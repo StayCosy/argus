@@ -20,9 +20,8 @@
         <!-- API -->
         <module>argus-api</module>
         <!-- core -->
-        <module>argus-db</module>
-        <module>argus-cache</module>
         <module>argus-core</module>
+        <module>argus-idempotent</module>
         <!-- others -->
         <module>argus-example</module>
         <module>argus-test</module>

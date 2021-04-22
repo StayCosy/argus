@@ -130,6 +130,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.argus:argus-api</include>
+                                    <include>org.argus:argus-idempotent</include>
                                     <include>org.argus:argus-cache</include>
                                     <include>org.argus:argus-db</include>
                                     <include>org.argus:argus-core</include>

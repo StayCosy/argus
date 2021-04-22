@@ -6,11 +6,11 @@
 
     <parent>
         <groupId>org.argus</groupId>
-        <artifactId>argus-parent</artifactId>
+        <artifactId>argus-idempotent</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>argus-db</artifactId>
+    <artifactId>argus-cache</artifactId>
     <packaging>jar</packaging>
-
+    
 </project>

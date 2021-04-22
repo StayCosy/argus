@@ -10,7 +10,12 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>argus-cache</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>argus-idempotent</artifactId>
+    <packaging>pom</packaging>
 
+
+    <modules>
+        <module>argus-db</module>
+        <module>argus-cache</module>
+    </modules>
 </project>
