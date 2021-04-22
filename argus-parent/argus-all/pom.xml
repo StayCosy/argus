@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.argus</groupId>
+    <groupId>com.icbc.argus</groupId>
     <artifactId>argus-all</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -25,37 +25,37 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-cache</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-db</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-doc-swagger</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-example</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.argus</groupId>
+            <groupId>com.icbc.argus</groupId>
             <artifactId>argus-test</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -129,14 +129,14 @@
                             <createDependencyReducedPom>true</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
-                                    <include>org.argus:argus-api</include>
-                                    <include>org.argus:argus-idempotent</include>
-                                    <include>org.argus:argus-cache</include>
-                                    <include>org.argus:argus-db</include>
-                                    <include>org.argus:argus-core</include>
-                                    <include>org.argus:argus-doc-swagger</include>
-                                    <include>org.argus:argus-example</include>
-                                    <include>org.argus:argus-test</include>
+                                    <include>com.icbc.argus:argus-api</include>
+                                    <include>com.icbc.argus:argus-idempotent</include>
+                                    <include>com.icbc.argus:argus-cache</include>
+                                    <include>com.icbc.argus:argus-db</include>
+                                    <include>com.icbc.argus:argus-core</include>
+                                    <include>com.icbc.argus:argus-doc-swagger</include>
+                                    <include>com.icbc.argus:argus-example</include>
+                                    <include>com.icbc.argus:argus-test</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
