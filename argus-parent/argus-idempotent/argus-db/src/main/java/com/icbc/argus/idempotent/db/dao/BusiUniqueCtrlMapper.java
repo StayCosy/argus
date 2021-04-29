@@ -1,6 +1,7 @@
 package com.icbc.argus.idempotent.db.dao;
 
 import com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Description 防重控制表DAO层
@@ -8,6 +9,7 @@ import com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl;
  * @Param
  * @return
  **/
+@Repository
 public interface BusiUniqueCtrlMapper {
     /**
      * @return 受影响记录数

@@ -25,7 +25,7 @@
     delete from COSS_BUSI_UNIQUE_CTRL
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.example.demo.entity.BusiUniqueCtrl">
+    <insert id="insert" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
     insert into COSS_BUSI_UNIQUE_CTRL (ID, PART_ID, BUSI_SEQ_NO, 
       APP_SEQ_NOAT, BUSI_STATUS, PROCESSING_NODE, 
       LAST_MODIFY_TIME)
@@ -33,7 +33,7 @@
       #{appSeqNoat,jdbcType=INTEGER}, #{busiStatus,jdbcType=VARCHAR}, #{processingNode,jdbcType=VARCHAR}, 
       #{lastModifyTime,jdbcType=TIMESTAMP})
   </insert>
-    <insert id="insertSelective" parameterType="com.example.demo.entity.BusiUniqueCtrl">
+    <insert id="insertSelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
         insert into COSS_BUSI_UNIQUE_CTRL
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -82,7 +82,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.entity.BusiUniqueCtrl">
+    <update id="updateByPrimaryKeySelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
         update COSS_BUSI_UNIQUE_CTRL
         <set>
             <if test="partId != null">
@@ -106,7 +106,7 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.example.demo.entity.BusiUniqueCtrl">
+    <update id="updateByPrimaryKey" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
     update COSS_BUSI_UNIQUE_CTRL
     set PART_ID = #{partId,jdbcType=VARCHAR},
       BUSI_SEQ_NO = #{busiSeqNo,jdbcType=VARCHAR},
