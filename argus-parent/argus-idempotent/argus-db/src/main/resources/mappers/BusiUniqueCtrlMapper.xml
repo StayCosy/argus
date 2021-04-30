@@ -1,116 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.icbc.argus.idempotent.db.dao.BusiUniqueCtrlMapper">
-    <resultMap id="BaseResultMap" type="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
-        <constructor>
-            <idArg column="ID" jdbcType="BIGINT" javaType="java.lang.Long"/>
-            <arg column="PART_ID" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="BUSI_SEQ_NO" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="APP_SEQ_NOAT" jdbcType="INTEGER" javaType="java.lang.Integer"/>
-            <arg column="BUSI_STATUS" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="PROCESSING_NODE" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="LAST_MODIFY_TIME" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
-        </constructor>
-    </resultMap>
-    <sql id="Base_Column_List">
-    ID, PART_ID, BUSI_SEQ_NO, APP_SEQ_NOAT, BUSI_STATUS, PROCESSING_NODE, LAST_MODIFY_TIME
+<mapper namespace="com.icbc.argus.idempotent.db.dao.BusiUniqueCtrlMapper" >
+  <resultMap id="BaseResultMap" type="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl" >
+    <constructor >
+      <idArg column="ID" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="PART_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="BUSI_SEQ_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="APP_SEQ_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="BUSI_STATUS" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PROCESSING_NODE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="LAST_MODIFY_TIME" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PART_ID, BUSI_SEQ_NO, APP_SEQ_NO, BUSI_STATUS, PROCESSING_NODE, LAST_MODIFY_TIME
   </sql>
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
-        select
-        <include refid="Base_Column_List"/>
-        from COSS_BUSI_UNIQUE_CTRL
-        where ID = #{id,jdbcType=BIGINT}
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from COSS_BUSI_UNIQUE_CTRL
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from COSS_BUSI_UNIQUE_CTRL
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
+  <insert id="insert" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl" >
     insert into COSS_BUSI_UNIQUE_CTRL (ID, PART_ID, BUSI_SEQ_NO, 
-      APP_SEQ_NOAT, BUSI_STATUS, PROCESSING_NODE, 
+      APP_SEQ_NO, BUSI_STATUS, PROCESSING_NODE, 
       LAST_MODIFY_TIME)
     values (#{id,jdbcType=BIGINT}, #{partId,jdbcType=VARCHAR}, #{busiSeqNo,jdbcType=VARCHAR}, 
-      #{appSeqNoat,jdbcType=INTEGER}, #{busiStatus,jdbcType=VARCHAR}, #{processingNode,jdbcType=VARCHAR}, 
+      #{appSeqNo,jdbcType=VARCHAR}, #{busiStatus,jdbcType=VARCHAR}, #{processingNode,jdbcType=VARCHAR}, 
       #{lastModifyTime,jdbcType=TIMESTAMP})
   </insert>
-    <insert id="insertSelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
-        insert into COSS_BUSI_UNIQUE_CTRL
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                ID,
-            </if>
-            <if test="partId != null">
-                PART_ID,
-            </if>
-            <if test="busiSeqNo != null">
-                BUSI_SEQ_NO,
-            </if>
-            <if test="appSeqNoat != null">
-                APP_SEQ_NOAT,
-            </if>
-            <if test="busiStatus != null">
-                BUSI_STATUS,
-            </if>
-            <if test="processingNode != null">
-                PROCESSING_NODE,
-            </if>
-            <if test="lastModifyTime != null">
-                LAST_MODIFY_TIME,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                #{id,jdbcType=BIGINT},
-            </if>
-            <if test="partId != null">
-                #{partId,jdbcType=VARCHAR},
-            </if>
-            <if test="busiSeqNo != null">
-                #{busiSeqNo,jdbcType=VARCHAR},
-            </if>
-            <if test="appSeqNoat != null">
-                #{appSeqNoat,jdbcType=INTEGER},
-            </if>
-            <if test="busiStatus != null">
-                #{busiStatus,jdbcType=VARCHAR},
-            </if>
-            <if test="processingNode != null">
-                #{processingNode,jdbcType=VARCHAR},
-            </if>
-            <if test="lastModifyTime != null">
-                #{lastModifyTime,jdbcType=TIMESTAMP},
-            </if>
-        </trim>
-    </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
-        update COSS_BUSI_UNIQUE_CTRL
-        <set>
-            <if test="partId != null">
-                PART_ID = #{partId,jdbcType=VARCHAR},
-            </if>
-            <if test="busiSeqNo != null">
-                BUSI_SEQ_NO = #{busiSeqNo,jdbcType=VARCHAR},
-            </if>
-            <if test="appSeqNoat != null">
-                APP_SEQ_NOAT = #{appSeqNoat,jdbcType=INTEGER},
-            </if>
-            <if test="busiStatus != null">
-                BUSI_STATUS = #{busiStatus,jdbcType=VARCHAR},
-            </if>
-            <if test="processingNode != null">
-                PROCESSING_NODE = #{processingNode,jdbcType=VARCHAR},
-            </if>
-            <if test="lastModifyTime != null">
-                LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=TIMESTAMP},
-            </if>
-        </set>
-        where ID = #{id,jdbcType=BIGINT}
-    </update>
-    <update id="updateByPrimaryKey" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl">
+  <insert id="insertSelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl" >
+    insert into COSS_BUSI_UNIQUE_CTRL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="partId != null" >
+        PART_ID,
+      </if>
+      <if test="busiSeqNo != null" >
+        BUSI_SEQ_NO,
+      </if>
+      <if test="appSeqNo != null" >
+        APP_SEQ_NO,
+      </if>
+      <if test="busiStatus != null" >
+        BUSI_STATUS,
+      </if>
+      <if test="processingNode != null" >
+        PROCESSING_NODE,
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="partId != null" >
+        #{partId,jdbcType=VARCHAR},
+      </if>
+      <if test="busiSeqNo != null" >
+        #{busiSeqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="appSeqNo != null" >
+        #{appSeqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="busiStatus != null" >
+        #{busiStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processingNode != null" >
+        #{processingNode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        #{lastModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl" >
+    update COSS_BUSI_UNIQUE_CTRL
+    <set >
+      <if test="partId != null" >
+        PART_ID = #{partId,jdbcType=VARCHAR},
+      </if>
+      <if test="busiSeqNo != null" >
+        BUSI_SEQ_NO = #{busiSeqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="appSeqNo != null" >
+        APP_SEQ_NO = #{appSeqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="busiStatus != null" >
+        BUSI_STATUS = #{busiStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="processingNode != null" >
+        PROCESSING_NODE = #{processingNode,jdbcType=VARCHAR},
+      </if>
+      <if test="lastModifyTime != null" >
+        LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl" >
     update COSS_BUSI_UNIQUE_CTRL
     set PART_ID = #{partId,jdbcType=VARCHAR},
       BUSI_SEQ_NO = #{busiSeqNo,jdbcType=VARCHAR},
-      APP_SEQ_NOAT = #{appSeqNoat,jdbcType=INTEGER},
+      APP_SEQ_NO = #{appSeqNo,jdbcType=VARCHAR},
       BUSI_STATUS = #{busiStatus,jdbcType=VARCHAR},
       PROCESSING_NODE = #{processingNode,jdbcType=VARCHAR},
       LAST_MODIFY_TIME = #{lastModifyTime,jdbcType=TIMESTAMP}

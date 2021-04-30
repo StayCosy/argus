@@ -1,7 +1,6 @@
 package com.icbc.argus.idempotent.db.entity;
 
 import java.util.Date;
-
 /*
  *
  * @Description 防重控制表pojo
@@ -16,7 +15,7 @@ public class BusiUniqueCtrl {
 
     private String busiSeqNo;
 
-    private Integer appSeqNoat;
+    private String appSeqNo;
 
     private String busiStatus;
 
@@ -24,11 +23,11 @@ public class BusiUniqueCtrl {
 
     private Date lastModifyTime;
 
-    public BusiUniqueCtrl(Long id, String partId, String busiSeqNo, Integer appSeqNoat, String busiStatus, String processingNode, Date lastModifyTime) {
+    public BusiUniqueCtrl(Long id, String partId, String busiSeqNo, String appSeqNo, String busiStatus, String processingNode, Date lastModifyTime) {
         this.id = id;
         this.partId = partId;
         this.busiSeqNo = busiSeqNo;
-        this.appSeqNoat = appSeqNoat;
+        this.appSeqNo = appSeqNo;
         this.busiStatus = busiStatus;
         this.processingNode = processingNode;
         this.lastModifyTime = lastModifyTime;
@@ -62,12 +61,12 @@ public class BusiUniqueCtrl {
         this.busiSeqNo = busiSeqNo == null ? null : busiSeqNo.trim();
     }
 
-    public Integer getAppSeqNoat() {
-        return appSeqNoat;
+    public String getAppSeqNo() {
+        return appSeqNo;
     }
 
-    public void setAppSeqNoat(Integer appSeqNoat) {
-        this.appSeqNoat = appSeqNoat;
+    public void setAppSeqNo(String appSeqNo) {
+        this.appSeqNo = appSeqNo == null ? null : appSeqNo.trim();
     }
 
     public String getBusiStatus() {

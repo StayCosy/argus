@@ -30,7 +30,7 @@ public class DbTest {
         busiUniqueCtrl.setBusiSeqNo("B01");
         busiUniqueCtrl.setPartId("01");
         busiUniqueCtrl.setProcessingNode("1-1-1-1");
-        busiUniqueCtrl.setAppSeqNoat(1);
+        busiUniqueCtrl.setAppSeqNo("A01");
         busiUniqueCtrl.setBusiStatus("1");
         busiUniqueCtrl.setLastModifyTime(new Date());
         busiUniqueCtrlService.insertBusiUniqueCtrlRecord(busiUniqueCtrl);
@@ -40,7 +40,7 @@ public class DbTest {
 
     @Test
     public void testSearch(){
-        BusiUniqueCtrl busiUniqueCtrl = busiUniqueCtrlService.getBusiUniqueCtrl("5");
+        BusiUniqueCtrl busiUniqueCtrl = busiUniqueCtrlService.getBusiUniqueCtrl("6");
         if(busiUniqueCtrl != null){
             System.out.println("BusiSeqNo = " + busiUniqueCtrl.getBusiSeqNo());
         }
