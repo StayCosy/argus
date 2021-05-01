@@ -20,7 +20,12 @@
             <artifactId>argus-db</artifactId>
             <version>${revision}</version>
         </dependency>
-
+        <!--JAR FOR ARGUS-LOG-->
+        <dependency>
+            <groupId>com.icbc.argus</groupId>
+            <artifactId>argus-log</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
 </project>

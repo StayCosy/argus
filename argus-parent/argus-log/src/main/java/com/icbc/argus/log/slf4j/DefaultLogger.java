@@ -1,5 +1,6 @@
 package com.icbc.argus.log.slf4j;
 
+import com.icbc.argus.log.slf4j.annotation.LoggerTarget;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
  * @version 1.0
  * @date 2021/5/1 10:44
  */
+@LoggerTarget
 public class DefaultLogger implements Logger {
 
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(DefaultLogger.class);
