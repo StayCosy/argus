@@ -1,1 +1,1 @@
-com.icbc.argus.log.slf4j.DefaultLogger
+com.icbc.argus.log.slf4j.handler.DefaultLogger

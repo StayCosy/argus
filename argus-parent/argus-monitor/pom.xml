@@ -10,15 +10,8 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>argus-log</artifactId>
+    <artifactId>argus-monitor</artifactId>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.icbc.argus</groupId>
-            <artifactId>argus-monitor</artifactId>
-            <version>${revision}</version>
-        </dependency>
-    </dependencies>
     
 </project>

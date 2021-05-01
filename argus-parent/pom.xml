@@ -22,8 +22,9 @@
         <!-- core -->
         <module>argus-core</module>
         <module>argus-idempotent</module>
-
+        <!--log-->
         <module>argus-log</module>
+        <module>argus-monitor</module>
         <!-- others -->
         <module>argus-example</module>
         <module>argus-test</module>

@@ -10,6 +10,7 @@
         <module name="argus-core" />
         <module name="argus-db" />
         <module name="argus-doc-swagger" />
+        <module name="argus-monitor" />
         <module name="argus-cache" />
         <module name="argus-example" />
         <module name="argus-api" />
