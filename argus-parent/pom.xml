@@ -22,6 +22,8 @@
         <!-- core -->
         <module>argus-core</module>
         <module>argus-idempotent</module>
+
+        <module>argus-log</module>
         <!-- others -->
         <module>argus-example</module>
         <module>argus-test</module>
@@ -49,6 +51,8 @@
         <druid.version>1.0.18</druid.version>
         <!--mysql version-->
         <mysql.version>8.0.24</mysql.version>
+        <!--slf4j version-->
+        <slf4j.version>1.7.25</slf4j.version>
     </properties>
 
     <dependencies>
@@ -129,6 +133,18 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        <!--JAR FOR LOG-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

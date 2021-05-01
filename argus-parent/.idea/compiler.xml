@@ -6,14 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="argus-all" />
         <module name="argus-core" />
         <module name="argus-db" />
         <module name="argus-doc-swagger" />
-        <module name="argus-test" />
         <module name="argus-cache" />
         <module name="argus-example" />
         <module name="argus-api" />
-        <module name="argus-all" />
+        <module name="argus-test" />
+        <module name="argus-log" />
       </profile>
     </annotationProcessing>
   </component>
