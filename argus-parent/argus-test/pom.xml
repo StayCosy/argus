@@ -13,6 +13,10 @@
     <artifactId>argus-test</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <logback.version>1.1.7</logback.version>
+    </properties>
+
     <dependencies>
         <!--JAR FOR ARGUS-DB-->
         <dependency>
@@ -25,6 +29,17 @@
             <groupId>com.icbc.argus</groupId>
             <artifactId>argus-log</artifactId>
             <version>${revision}</version>
+        </dependency>
+        <!--JAR FOR LOGBACK-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 
