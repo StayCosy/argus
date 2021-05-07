@@ -49,8 +49,8 @@ public class LoggerSpiFactory {
             // Load first encountered logger if multiple loggers are associated with the same name.
             if (!StringUtils.isNullOrEmpty(name) && !LOGGER_MAP.containsKey(name)) {
                 LOGGER_MAP.put(name, logger);
-                System.out.println("Sentinel Logger SPI loaded for <" + name + ">: "
-                        + logger.getClass().getCanonicalName());
+                /*System.out.println("Sentinel Logger SPI loaded for <" + name + ">: "
+                        + logger.getClass().getCanonicalName());*/
             }
         }
     }

@@ -42,6 +42,7 @@ public class BusiUniqueCtrlService {
      * @Param [busiUniqueCtrl]
      **/
     public BusiUniqueCtrl getBusiUniqueCtrl(String id) {
+        RecordLogApi.info("test log config!");
         if (!id.isEmpty()) {
             return busiUniqueCtrlMapper.selectByPrimaryKey(Long.parseLong(id));
         }
