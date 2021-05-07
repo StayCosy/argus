@@ -40,7 +40,7 @@ public class DbTest {
 
     @Test
     public void testSearch(){
-        BusiUniqueCtrl busiUniqueCtrl = busiUniqueCtrlService.getBusiUniqueCtrl("6");
+        BusiUniqueCtrl busiUniqueCtrl = busiUniqueCtrlService.getBusiUniqueCtrl("1");
         if(busiUniqueCtrl != null){
             System.out.println("BusiSeqNo = " + busiUniqueCtrl.getBusiSeqNo());
         }
