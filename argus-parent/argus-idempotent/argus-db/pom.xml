@@ -13,6 +13,14 @@
     <artifactId>argus-db</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.icbc.argus</groupId>
+            <artifactId>argus-log</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+
 
 
 </project>

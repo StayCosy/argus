@@ -4,11 +4,12 @@ import com.icbc.argus.idempotent.db.entity.BusiUniqueCtrl;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Description 防重控制表DAO层
- * @Date 2021/4/29 15:08
- * @Param
- * @return
- **/
+ * 防重控制表DAO
+ *
+ * @author COSY
+ * @version 1.0
+ * @date 2021/5/1 14:12
+ */
 @Repository
 public interface BusiUniqueCtrlMapper {
     /**

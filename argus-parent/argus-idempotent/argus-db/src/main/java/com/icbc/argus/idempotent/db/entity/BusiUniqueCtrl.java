@@ -1,13 +1,14 @@
 package com.icbc.argus.idempotent.db.entity;
 
 import java.util.Date;
-/*
+
+/**
+ * 防重控制表pojo
  *
- * @Description 防重控制表pojo
- * @Date 2021/4/29 15:09
- * @Param
- * @return
- **/
+ * @author COSY
+ * @version 1.0
+ * @date 2021/5/1 14:12
+ */
 public class BusiUniqueCtrl {
     private Long id;
 
