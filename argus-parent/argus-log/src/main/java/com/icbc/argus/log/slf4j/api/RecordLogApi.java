@@ -22,7 +22,7 @@ public class RecordLogApi {
             // 在这里获取需要的日志句柄
             logger = LoggerSpiFactory.getLogger(DEFAULT_LOG_FILENAME);
         } catch (Throwable t) {
-            System.err.println("Error: failed to initialize Sentinel RecordLog");
+            System.err.println("Error: failed to initialize Argus RecordLog");
             t.printStackTrace();
         }
     }
