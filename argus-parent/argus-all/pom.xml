@@ -136,6 +136,7 @@
                                     <include>com.icbc.argus:argus-core</include>
                                     <include>com.icbc.argus:argus-doc-swagger</include>
                                     <include>com.icbc.argus:argus-example</include>
+                                    <include>com.icbc.argus:argus-monitor</include>
                                     <include>com.icbc.argus:argus-test</include>
                                 </includes>
                             </artifactSet>
