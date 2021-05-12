@@ -24,6 +24,12 @@
             <artifactId>argus-db</artifactId>
             <version>${revision}</version>
         </dependency>
+        <!--JAR FOR ARGUS-CACHE-->
+        <dependency>
+            <groupId>com.icbc.argus</groupId>
+            <artifactId>argus-cache</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <!--JAR FOR ARGUS-LOG-->
         <dependency>
             <groupId>com.icbc.argus</groupId>
