@@ -12,5 +12,21 @@
 
     <artifactId>argus-cache</artifactId>
     <packaging>jar</packaging>
-    
+
+    <properties>
+        <jetcache.version>2.4.4</jetcache.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alicp.jetcache</groupId>
+            <artifactId>jetcache-anno</artifactId>
+            <version>${jetcache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alicp.jetcache</groupId>
+            <artifactId>jetcache-redis</artifactId>
+            <version>${jetcache.version}</version>
+        </dependency>
+    </dependencies>
 </project>
